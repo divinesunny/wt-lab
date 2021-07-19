@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        body{
+            background-image:url(galaxy.jpg) ;
+            background-size:1380px 675px;
+        }
+        p{background-color: rgb(6, 14, 58); 
+         color: cornsilk;
+        position: absolute;height: 32px;
+         font-size: 22px;
+         font-weight:bolder;
+         align-items: center;}
+        
+         button{
+            
+             border-radius: 50%;
+             border-width: 1px;
+             
+             }
+             
+        
+    </style>
+    <script>
+        function planet(name,distance,gas){
+            this.name = name;
+            this.distance = distance;
+            this.gas=gas;
+
+            this.display = function(){
+                document.getElementById("dsp").innerHTML =  `Planet name is '${this.name}' and it's distance from sun is ${this.distance} million kms and gases presents are ${this.gas}`
+            }
+        }
+        function fun1(){
+            let nwPlanet = new planet("Mercury", "52.816","hydrogen,helium,oxygen..")
+            nwPlanet.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+       
+        function fun2(){
+            let nwPlanet2 = new planet("Venus", "107.78","Carbon dioxide")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+        
+        function fun3(){
+            let nwPlanet2 = new planet("Earth", "151.06","nitrogen,oxygen,carbon dioxide")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+
+        function fun4(){
+            let nwPlanet2 = new planet("Mars", "247.72"," carbon dioxide,ntrogen,oxygen..")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+       
+
+        function fun5(){
+            let nwPlanet2 = new planet("Jupiter", "756.52","hydrogen,helium")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+        
+        function fun6(){
+            let nwPlanet2 = new planet("Saturn", "934","hydrogen,ammonia,methane..")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+        
+        function fun7(){
+            let nwPlanet2 = new planet("Uranus", "2871","hydrogen,helium")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+        function fun8(){
+            let nwPlanet = new planet("Neptune", "4497","hydrogen,helium,methane,ethane and ethyne.")
+            nwPlanet.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+       
+       
+    </script>
+   
+</head>
+<body>
+    <br><br><br><br>
+    <div style="margin-top: 50px; text-align: center;  ">
+        <button class="c1" onclick="fun1()" style="background-color: chartreuse;position: absolute;left:469px;top:138px;padding:19px 25px;"></button><br><br>
+        <button class="c2" onclick="fun2()" style="background-color: aqua;position: absolute;left:146px;top:332px;padding:30px 40px;"> </button><br><br>
+        <button class="c3" onclick="fun3()" style="background-color: rgb(123, 24, 148);position: absolute;left:576px;top:248px;padding:41px 55px;"></button><br><br>
+        <button class="c4" onclick="fun4()" style="background-color: rgba(228, 79, 21, 0.623);position: absolute;left:800px;top:50px;padding:25px 32px"></button><br><br>
+        <button class="c5" onclick="fun5()" style="background-color:gold;position: absolute;left: 840px;top: 183px;padding: 80px 109px"></button><br><br>
+        <button class="c6" onclick="fun6()" style="background-color: rgb(247, 171, 85);position: absolute;left:499px;top:475px;padding:68px 92px;"></button><br><br>
+        <button class="c7" onclick="fun7()" style="background-color: rgb(82, 202, 108);position: absolute;right:78px;top:358px;padding:44px 62px;"></button><br><br>
+        <button class="c8" onclick="fun8()" style="position: absolute;right:209px;bottom: 50px;padding:34px 47px;"></button>
+        <br><br>
+        <p id="dsp"></p>
+        <p id="disp1"></p>
+    </div>
+    
+</body>
+</html>

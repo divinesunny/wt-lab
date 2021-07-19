@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        button {
+            margin: auto;
+        }
+    </style>
+    <title>Event Handler</title>
+</head>
+
+<body style="background-color: (14,13,230);">
+    <button>Change color</button>
+    <script>
+        const btn = document.querySelector('button');
+        function random(number) {
+            return Math.floor(Math.random() * number);
+        }
+        function colorchange() {
+            const rdmcolor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.body.style.backgroundColor = rdmcolor;
+        }
+        btn.onclick = colorchange;
+    </script>
+
+</body>
+
+</html>

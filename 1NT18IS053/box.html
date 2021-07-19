@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+    <center>
+    <div style="background-color: paleturquoise; justify-content: center; margin-top: 200px; box-sizing: content-box;
+    width: 40%;
+    padding: 40px;" id="b1">
+        <div style="background-color: plum; width: 20%; padding: 80px; box-sizing: content-box;align-self:center;" id="b2">
+            <div style="background-color: blue; padding: 60px; box-sizing: content-box;align-self: center; " id="b3">
+                <div style="background-color: red;padding:25px;box-sizing: content-box;padding-right: 20px;" id="b4"></div>
+            </div>
+        </div>
+    </div>
+    </center>
+    </body>
+    <script>
+      
+        document.getElementById("b1").addEventListener("mouseenter", ()=>{
+            console.log("Entered box 1")
+        });
+        // document.getElementById("b1").addEventListener("mouseout", () => {
+        //     console.log("Exited box 1")
+        // });
+        document.getElementById("b2").addEventListener("mouseenter", () => {
+            console.log("Entered box 2")
+        });
+        // document.getElementById("b2").addEventListener("mouseout", () => {
+        //     console.log("Exited box 2")
+        // });
+        document.getElementById("b3").addEventListener("mouseenter", () => {
+            console.log("Entered box 3")
+        });
+        // document.getElementById("b3").addEventListener("mouseout", () => {
+        //     console.log("Exited box 3")
+        // });
+        document.getElementById("b4").addEventListener("mouseenter", () => {
+            console.log("Danger")
+        });
+        // document.getElementById("b4").addEventListener("mouseout", () => {
+        //     console.log("Exited box 4")
+        // });
+
+        
+
+      
+        
+        </script>
+</html>

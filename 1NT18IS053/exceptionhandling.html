@@ -1,0 +1,76 @@
+<html>
+<h1>Error Handling</h1>
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="message"></p>
+
+<head>
+    <style>
+        p {
+            font-size: 30px;
+        }
+        
+        html {
+            background-color: blueviolet;
+            text-align: center;
+            padding-top: 60px;
+        }
+        
+        button {
+            width: 80px;
+            height: 40px;
+            background-color: lightcyan;
+        }
+    </style>
+
+    <script>
+        function myFunc() {
+            let a = 100;
+            let b = 0;
+
+            try {
+                if (b == 0) {
+                    throw ("Divide by zero error.");
+                } else {
+                    let c = a / b;
+                }
+            } catch (e) {
+                alert("Error: " + e);
+            }
+        }
+
+
+
+
+        function myFunction() {
+            var message, x;
+            message = document.getElementById("message");
+            message.innerHTML = "";
+            x = document.getElementById("demo").value;
+            try {
+                if (x == "") throw "is Empty";
+                if (isNaN(x)) throw "not a number";
+                if (x > 10) throw "too high";
+                if (x < 5) throw "too low";
+                if (x = 5, 6, 7, 8, 9, 10) throw "correct";
+            } catch (err) {
+                message.innerHTML = "Input " + err;
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <p>Divide by zero</p>
+
+    <form>
+        <input type="button" value="Click Me" onclick="myFunc();" />
+    </form>
+
+</body>
+
+</html>
